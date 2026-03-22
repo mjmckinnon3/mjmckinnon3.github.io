@@ -141,7 +141,10 @@ h2,
 h3 {
   color: var(--primary);
 }
-
+header h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
 ul,
 ol {
   padding-left: 1.4rem;
