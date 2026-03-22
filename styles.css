@@ -1,0 +1,219 @@
+/*
+  IT 3203 Project Milestone #1
+  Single stylesheet used across the entire website.
+  This file demonstrates element, class, and id selectors.
+*/
+
+:root {
+  --primary: #1f3c5a;
+  --secondary: #2f6b8a;
+  --accent: #dfeaf2;
+  --text: #1f1f1f;
+  --light: #ffffff;
+  --border: #c7d4df;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: #f7f9fb;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--light);
+  padding: 1.25rem;
+  border-bottom: 4px solid #163048;
+}
+
+#site-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.tagline {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+}
+
+nav {
+  background-color: #163048;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  color: var(--light);
+  text-decoration: none;
+  padding: 0.95rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #2d567d;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.hero,
+.content-card,
+.sidebar-card,
+.table-wrapper,
+.image-card {
+  background-color: var(--light);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.feature-box {
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--secondary);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fbfdff;
+}
+
+.feature-box h3 {
+  margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--primary);
+}
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--accent);
+}
+
+.highlight {
+  background-color: #eef5fa;
+  border-left: 5px solid var(--secondary);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.resource-list a,
+.footer-note a,
+.content-card a {
+  color: var(--secondary);
+}
+
+.resource-list a:hover,
+.footer-note a:hover,
+.content-card a:hover {
+  color: #0f4d75;
+}
+
+footer {
+  background-color: #163048;
+  color: var(--light);
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-note {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.small-text {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav a {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
