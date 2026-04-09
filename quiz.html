@@ -3,56 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Self-assessment quiz about the evolution of servers from mainframes to cloud systems.">
+  <meta name="description" content="Interactive self-assessment quiz about the evolution of servers from mainframes to virtualization and cloud computing.">
   <title>Server Evolution | Quiz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <h1 id="site-title">The Evolution of Servers</h1>
-    <p class="tagline">Self-assessment quiz for milestone 2</p>
+    <p class="tagline">Interactive self-assessment quiz for Project Milestone 2</p>
   </header>
 
-  <nav>
+  <!-- Main site navigation kept consistent with the rest of the website -->
+  <nav aria-label="Main navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="history.html">History</a></li>
       <li><a href="virtualization.html">Virtualization</a></li>
       <li><a href="cloud.html">Cloud Infrastructure</a></li>
       <li><a href="concepts.html">Key Concepts</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="quiz.html" aria-current="page">Quiz</a></li>
       <li><a href="resources.html">References</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
 
-
   <main class="page-layout">
-    <section>
+    <section class="content-area">
       <article class="quiz-card">
-        <h2>Check your understanding</h2>
+        <h2>Check Your Understanding</h2>
         <p>
-          This quiz reviews the main ideas from the website. It includes a fill-in-the-blank question, three
-          multiple-choice questions, and one multi-selection question. After you submit, the page will immediately show
-          your total score, pass/fail result, and detailed feedback for each question.
+          This quiz reviews the major ideas covered throughout the website. It includes one fill-in-the-blank question,
+          three multiple-choice questions, and one multi-selection question, which matches the milestone requirements.
+          After submission, your score, pass/fail result, and detailed feedback for each question will appear immediately
+          on this same page.
         </p>
 
-        <div class="quiz-meta">
-          <span>5 questions</span>
-          <span>Pass at 70% or higher</span>
-          <span>Retake anytime</span>
+        <div class="quiz-meta" aria-label="Quiz details">
+          <span><strong>Questions:</strong> 5</span>
+          <span><strong>Passing score:</strong> 70%</span>
+          <span><strong>Attempts:</strong> Unlimited</span>
         </div>
 
-        <!-- Form controls are grouped by question type and labeled for accessibility -->
-        <form id="server-quiz" class="quiz-form">
-          <section class="quiz-question">
-            <label for="q1"><strong>1. Fill in the blank:</strong> What type of infrastructure allows servers to scale dynamically over the internet?</label>
-            <input type="text" id="q1" name="q1" placeholder="Type your answer here">
+        <!--
+          Quiz form structure:
+          - 1 fill-in-the-blank question
+          - 3 multiple-choice questions
+          - 1 multi-selection question
+          JavaScript in script.js should handle scoring, answer checking,
+          pass/fail status, and reset behavior.
+        -->
+        <form id="server-quiz" class="quiz-form" novalidate>
+          <section class="quiz-question" id="question-1">
+            <label for="q1">
+              <strong>1. Fill in the blank:</strong>
+              What type of infrastructure allows servers to scale dynamically over the internet?
+            </label>
+            <input
+              type="text"
+              id="q1"
+              name="q1"
+              placeholder="Example: cloud computing"
+              autocomplete="off"
+              aria-describedby="q1-help"
+              required>
+            <p id="q1-help" class="question-help">Enter the term that describes internet-based scalable infrastructure.</p>
           </section>
 
-          <section class="quiz-question">
+          <section class="quiz-question" id="question-2">
             <fieldset>
-              <legend>2. Multiple choice: What was a major limitation of centralized mainframe systems?</legend>
+              <legend><strong>2. Multiple choice:</strong> What was a major limitation of centralized mainframe systems?</legend>
               <div class="option-list">
                 <label><input type="radio" name="q2" value="high flexibility"> High flexibility</label>
                 <label><input type="radio" name="q2" value="limited accessibility"> Limited accessibility</label>
@@ -62,9 +81,9 @@
             </fieldset>
           </section>
 
-          <section class="quiz-question">
+          <section class="quiz-question" id="question-3">
             <fieldset>
-              <legend>3. Multiple choice: What technology allows multiple virtual servers to run on one physical machine?</legend>
+              <legend><strong>3. Multiple choice:</strong> What technology allows multiple virtual servers to run on one physical machine?</legend>
               <div class="option-list">
                 <label><input type="radio" name="q3" value="apis"> APIs</label>
                 <label><input type="radio" name="q3" value="virtualization"> Virtualization</label>
@@ -74,9 +93,9 @@
             </fieldset>
           </section>
 
-          <section class="quiz-question">
+          <section class="quiz-question" id="question-4">
             <fieldset>
-              <legend>4. Multiple choice: What is a key advantage of cloud computing?</legend>
+              <legend><strong>4. Multiple choice:</strong> What is a key advantage of cloud computing?</legend>
               <div class="option-list">
                 <label><input type="radio" name="q4" value="fixed capacity"> Fixed capacity</label>
                 <label><input type="radio" name="q4" value="limited access"> Limited access</label>
@@ -86,9 +105,9 @@
             </fieldset>
           </section>
 
-          <section class="quiz-question">
+          <section class="quiz-question" id="question-5">
             <fieldset>
-              <legend>5. Multi-selection: Which options are features of cloud-based systems?</legend>
+              <legend><strong>5. Multi-selection:</strong> Which options are features of cloud-based systems?</legend>
               <div class="option-list check-list">
                 <label><input type="checkbox" name="q5" value="Scalability"> Scalability</label>
                 <label><input type="checkbox" name="q5" value="Remote access"> Remote access</label>
@@ -105,8 +124,10 @@
         </form>
       </article>
 
-      <!-- Results are dynamically injected by JavaScript on the same page -->
-      <section id="quiz-results" class="result-panel" aria-live="polite">
+      <!-- Results are displayed on the same page after submission -->
+      <section id="quiz-results" class="result-panel" aria-live="polite" aria-labelledby="results-heading">
+        <h2 id="results-heading">Quiz Results</h2>
+        <p class="results-intro">Your score and feedback will appear here after you submit the quiz.</p>
         <div id="result-banner" class="result-banner"></div>
         <div id="score-output"></div>
         <div id="result-list" class="results-list"></div>
@@ -115,22 +136,36 @@
 
     <aside>
       <section class="sidebar-card">
-        <h2>Study tips</h2>
+        <h2>How to Prepare</h2>
         <ul>
-          <li>Review the history page before answering questions about early server models.</li>
-          <li>Use the virtualization page for questions about resource sharing.</li>
-          <li>Use the cloud page for questions about scalability and on-demand services.</li>
+          <li>Review the history page before answering questions about early server systems.</li>
+          <li>Use the virtualization page to review how one physical machine can host multiple virtual systems.</li>
+          <li>Use the cloud page to review scalability, remote access, and on-demand resources.</li>
+          <li>Read the key concepts page to strengthen vocabulary before submitting the quiz.</li>
         </ul>
+      </section>
+
+      <section class="sidebar-card">
+        <h2>What This Quiz Measures</h2>
+        <p>
+          The questions focus on the transition from centralized mainframes to virtualized environments and modern cloud
+          platforms. That directly matches the topic and the milestone requirement that the quiz be relevant to the
+          chosen subject.
+        </p>
       </section>
     </aside>
   </main>
 
   <footer>
     <div class="footer-note">
-      <p>This website is a class project for IT 3203. Visit the course site at <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203 Course Website</a>.</p>
+      <p>
+        This website is a class project for IT 3203. For course information, visit
+        <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203 Course Website</a>.
+      </p>
     </div>
   </footer>
 
+  <!-- External script handles scoring logic and feedback rendering -->
   <script src="script.js"></script>
 </body>
 </html>
