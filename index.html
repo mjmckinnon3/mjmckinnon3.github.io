@@ -7,119 +7,146 @@
   <title>Server Evolution | Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <!-- Shared page header with a stronger visual identity for milestone 2 -->
-  <header>
-    <h1 id="site-title">The Evolution of Servers</h1>
-    <p class="tagline">From centralized systems to virtualized cloud infrastructure</p>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="history.html">History</a></li>
-      <li><a href="virtualization.html">Virtualization</a></li>
-      <li><a href="cloud.html">Cloud Infrastructure</a></li>
-      <li><a href="concepts.html">Key Concepts</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="resources.html">References</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+<header>
+  <h1 id="site-title">The Evolution of Servers</h1>
+  <p class="tagline">From centralized systems to virtualized cloud infrastructure</p>
+</header>
 
+<nav>
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="history.html">History</a></li>
+    <li><a href="virtualization.html">Virtualization</a></li>
+    <li><a href="cloud.html">Cloud Infrastructure</a></li>
+    <li><a href="concepts.html">Key Concepts</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="resources.html">References</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
 
-  <main>
-    <section class="hero">
-      <div>
-        <h2>Why servers matter</h2>
-        <p>
-          Servers are the systems that keep the modern internet running. They store files, process requests, manage
-          databases, authenticate users, and deliver websites, APIs, and streaming content. Even simple actions like
-          loading a search page, logging into a school portal, or refreshing a social media feed depend on server-side
-          infrastructure working quickly and reliably.
-        </p>
-        <p>
-          The history of servers is really the story of solving growing technical demands. As organizations added more
-          users and more data, they needed systems that could scale, remain available, and adapt to new workloads.
-          That pressure drove the shift from centralized mainframes to distributed networks, then to virtual machines,
-          and finally to cloud platforms that allocate resources on demand.
-        </p>
+<main>
 
-        <div class="highlight">
-          <strong>Abstract:</strong> Server technology evolved to solve scale, reliability, and flexibility problems.
-          Centralized systems were powerful but limited. Client-server architecture distributed work more efficiently.
-          Virtualization made hardware easier to share and manage. Cloud platforms then turned servers into elastic,
-          remotely managed resources that support modern web applications around the clock.
-        </div>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div>
+      <h2>Why servers matter</h2>
+
+      <p>
+        Servers are the foundation of the modern internet. Every time a user loads a website,
+        logs into a system, or streams content, a server processes the request and delivers data.
+        These systems handle storage, authentication, communication, and application logic across
+        global networks.
+      </p>
+
+      <p>
+        As technology advanced, servers had to evolve to handle more users, more data, and higher
+        performance expectations. This evolution reflects the need for systems that are scalable,
+        reliable, and efficient under increasing demand.
+      </p>
+
+      <div class="highlight">
+        <strong>Overview:</strong>
+        Server technology evolved to solve problems of scale, efficiency, and reliability.
+        Centralized systems were powerful but rigid. Distributed systems improved flexibility.
+        Virtualization optimized hardware usage. Cloud computing introduced on-demand,
+        scalable infrastructure that powers modern applications.
       </div>
-
-      <div class="image-card">
-        <figure>
-          <img src="images/server-architecture.svg" alt="Diagram showing centralized mainframes, virtualized server clusters, and cloud platforms.">
-          <figcaption>Visual summary of the progression from centralized computing to virtualized and cloud-based infrastructure.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="summary-strip">
-      <h2>What changed over time?</h2>
-      <div class="summary-grid">
-        <div class="summary-box">
-          <h3>Performance pressure</h3>
-          <p>As websites and digital services expanded, one machine could no longer handle every request efficiently.</p>
-        </div>
-        <div class="summary-box">
-          <h3>Resource efficiency</h3>
-          <p>Virtualization reduced hardware waste by letting one physical system host multiple isolated workloads.</p>
-        </div>
-        <div class="summary-box">
-          <h3>Flexible scale</h3>
-          <p>Cloud platforms made it possible to add capacity quickly instead of waiting for new physical hardware.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-card">
-      <h2>Key terms introduced on this site</h2>
-      <ul class="callout-list">
-        <li><strong>Server:</strong> a system that provides resources or services to other devices on a network.</li>
-        <li><strong>Client-server architecture:</strong> a structure where users request data or services from a dedicated server.</li>
-        <li><strong>Virtualization:</strong> a method for running multiple virtual systems on shared physical hardware.</li>
-        <li><strong>Cloud computing:</strong> the delivery of computing resources over the internet as on-demand services.</li>
-        <li><strong>Scalability:</strong> the ability to support growth in users, data, or requests without major performance loss.</li>
-      </ul>
-    </section>
-
-    <section class="content-card">
-      <h2>How to use this site</h2>
-      <ol>
-        <li>Start with the history page to understand how early server models worked.</li>
-        <li>Move to the virtualization and cloud pages to see how infrastructure became more flexible.</li>
-        <li>Review the key concepts page for definitions that organize the topic.</li>
-        <li>Take the <a href="quiz.html">self-assessment quiz</a> to check your understanding.</li>
-      </ol>
-    </section>
-
-    <section class="card-grid">
-      <article class="feature-box">
-        <h3>Early systems</h3>
-        <p>Mainframes supported many users, but high cost and centralized control made expansion difficult.</p>
-      </article>
-      <article class="feature-box">
-        <h3>Distributed work</h3>
-        <p>Client-server architecture separated user interaction from service delivery and improved flexibility.</p>
-      </article>
-      <article class="feature-box">
-        <h3>Modern web</h3>
-        <p>Cloud infrastructure allows organizations to launch services, manage traffic spikes, and support global users.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-note">
-      <p>This website is a class project for IT 3203. Visit the course site at <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203 Course Website</a>.</p>
     </div>
-  </footer>
+
+    <div class="image-card">
+      <figure>
+        <img src="images/server-architecture.svg" alt="Diagram showing server evolution from mainframes to cloud computing">
+        <figcaption>
+          The transition from centralized computing to distributed and cloud-based systems.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- KEY CHANGES -->
+  <section class="summary-strip">
+    <h2>What changed over time?</h2>
+
+    <div class="summary-grid">
+
+      <div class="summary-box">
+        <h3>Performance limits</h3>
+        <p>Single systems could not handle increasing workloads, forcing a shift to distributed computing.</p>
+      </div>
+
+      <div class="summary-box">
+        <h3>Hardware efficiency</h3>
+        <p>Virtualization allowed multiple systems to share one machine, reducing cost and improving usage.</p>
+      </div>
+
+      <div class="summary-box">
+        <h3>Scalable infrastructure</h3>
+        <p>Cloud platforms introduced flexible, on-demand resources that adjust to user demand in real time.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEY TERMS -->
+  <section class="content-card">
+    <h2>Key terms</h2>
+
+    <ul class="callout-list">
+      <li><strong>Server:</strong> A system that provides data, services, or resources to other devices.</li>
+      <li><strong>Client-server model:</strong> A structure where users request services from centralized systems.</li>
+      <li><strong>Virtualization:</strong> Running multiple virtual systems on one physical machine.</li>
+      <li><strong>Cloud computing:</strong> Delivering computing resources over the internet on demand.</li>
+      <li><strong>Scalability:</strong> The ability to grow without losing performance.</li>
+    </ul>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="content-card">
+    <h2>How to use this site</h2>
+
+    <ol>
+      <li>Start with the <a href="history.html">history page</a> to understand early systems.</li>
+      <li>Explore <a href="virtualization.html">virtualization</a> and <a href="cloud.html">cloud computing</a>.</li>
+      <li>Review the <a href="concepts.html">key concepts</a> page for definitions.</li>
+      <li>Take the <a href="quiz.html">quiz</a> to test your understanding.</li>
+    </ol>
+  </section>
+
+  <!-- FEATURE CARDS -->
+  <section class="card-grid">
+
+    <article class="feature-box">
+      <h3>Centralized systems</h3>
+      <p>Mainframes handled all processing but limited flexibility and scalability.</p>
+    </article>
+
+    <article class="feature-box">
+      <h3>Distributed architecture</h3>
+      <p>Client-server models separated responsibilities and improved system performance.</p>
+    </article>
+
+    <article class="feature-box">
+      <h3>Cloud platforms</h3>
+      <p>Modern systems dynamically scale resources to support global applications.</p>
+    </article>
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-note">
+    <p>
+      This website is a class project for IT 3203.
+      Visit the course site at
+      <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203 Course Website</a>.
+    </p>
+  </div>
+</footer>
+
 </body>
 </html>
