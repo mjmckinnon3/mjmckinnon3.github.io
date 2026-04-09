@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Consistent page header and navigation used across the site -->
   <header>
     <h1 id="site-title">The Evolution of Servers</h1>
     <p class="tagline">Virtualization as a turning point</p>
@@ -21,46 +20,51 @@
       <li><a href="virtualization.html">Virtualization</a></li>
       <li><a href="cloud.html">Cloud Infrastructure</a></li>
       <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
       <li><a href="resources.html">References</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </nav>
 
-  <!-- Main content area for this page -->
+
   <main class="page-layout">
     <section>
       <article class="content-card">
         <h2>What virtualization means</h2>
         <p>
           Virtualization allows one physical server to run multiple virtual machines, each acting like its own separate
-          computer. Instead of dedicating one entire machine to one task, organizations can divide hardware resources more
-          efficiently.
+          computer. Instead of dedicating one entire machine to one task, organizations can divide hardware resources
+          more efficiently. That separation also improves flexibility because environments can be created, copied, or
+          restored through software rather than by purchasing and wiring entirely new servers.
         </p>
         <p>
-          This was a major turning point because it improved flexibility, reduced wasted hardware capacity, and made it
-          easier to launch new services quickly. It also created the technical base for cloud computing.
+          This became a major turning point in server infrastructure because it improved efficiency and reduced waste.
+          Businesses no longer had to keep many underused physical machines running for small workloads. By pooling
+          processing power, memory, and storage, they could support more applications with the same hardware footprint.
         </p>
       </article>
 
       <article class="content-card">
         <h2>Why virtualization mattered</h2>
         <ul>
-          <li>Improved hardware efficiency by sharing resources across virtual systems</li>
+          <li>Improved hardware efficiency by sharing resources across several virtual systems</li>
           <li>Made deployment faster because new environments could be created in software</li>
-          <li>Helped organizations scale services up or down with less physical reconfiguration</li>
-          <li>Supported testing, backup, and recovery more easily than older hardware-only setups</li>
+          <li>Reduced infrastructure cost by lowering the need for one machine per workload</li>
+          <li>Supported backup, testing, and recovery more easily than hardware-only models</li>
         </ul>
       </article>
 
       <article class="content-card">
         <h2>Shift in server thinking</h2>
         <p>
-          Before virtualization, a server usually meant a single physical machine. After virtualization, a server could be
-          understood as a software-defined resource running on shared infrastructure. That shift changed how developers,
-          administrators, and organizations planned for growth.
+          Before virtualization, a server was usually thought of as one physical box with one main purpose. After
+          virtualization, infrastructure planning changed. Administrators could think in terms of resource pools,
+          software-defined environments, and flexible provisioning. That shift laid the technical foundation for cloud
+          computing, where workloads can be started or expanded quickly on shared infrastructure.
         </p>
         <div class="highlight">
-          Virtualization did not remove hardware, but it separated services from strict dependence on one physical box.
+          Virtualization did not remove hardware. It changed how hardware was used by separating services from strict
+          dependence on one dedicated physical machine.
         </div>
       </article>
     </section>
@@ -70,23 +74,23 @@
         <h2>Virtual machine benefits</h2>
         <ol>
           <li>Better resource usage</li>
-          <li>Lower cost</li>
+          <li>Lower cost per workload</li>
           <li>Faster deployment</li>
-          <li>More flexible maintenance</li>
+          <li>More flexible maintenance and recovery</li>
         </ol>
       </section>
 
       <section class="sidebar-card">
-        <h2>Connection to modern web development</h2>
+        <h2>Connection to web development</h2>
         <p>
-          Virtualization matters in web development because modern websites and web apps often run in environments that are
-          provisioned automatically rather than set up by hand on a single permanent server.
+          Virtualization matters in web development because many websites and web apps run in environments that are
+          provisioned automatically. Developers often deploy code to infrastructure that can be cloned, scaled, or
+          replaced much faster than a traditional hand-configured server.
         </p>
       </section>
     </aside>
   </main>
 
-    <!-- Footer note required by the assignment -->
   <footer>
     <div class="footer-note">
       <p>This website is a class project for IT 3203. Visit the course site at <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203 Course Website</a>.</p>

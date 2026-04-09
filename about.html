@@ -1,73 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About the student and the purpose of the server evolution project.">
-  <title>Server Evolution | About</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Consistent page header and navigation used across the site -->
-  <header>
-    <h1 id="site-title">The Evolution of Servers</h1>
-    <p class="tagline">About the student and project</p>
-  </header>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Server evolution diagram</title>
+  <desc id="desc">A three-column diagram showing centralized mainframes, virtualized server clusters, and cloud platforms.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eef5fb"/>
+      <stop offset="100%" stop-color="#dfeaf4"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f7fbff"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #163048; }
+      .subtitle { font: 600 18px Arial, sans-serif; fill: #1f3c5a; }
+      .label { font: 600 16px Arial, sans-serif; fill: #163048; }
+      .body { font: 14px Arial, sans-serif; fill: #29445d; }
+      .small { font: 12px Arial, sans-serif; fill: #45627b; }
+      .card { fill: url(#panel); stroke: #9bb5ca; stroke-width: 2; rx: 16; }
+      .arrow { stroke: #2f6b8a; stroke-width: 6; fill: none; marker-end: url(#arrowhead); }
+      .server { fill: #2f6b8a; rx: 10; }
+      .server2 { fill: #4f87a4; rx: 10; }
+      .terminal { fill: #eef5fb; stroke: #7f9cb2; stroke-width: 2; rx: 8; }
+      .cloud { fill: #d6e9f6; stroke: #5a89a5; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2f6b8a"/>
+    </marker>
+  </defs>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="history.html">History</a></li>
-      <li><a href="virtualization.html">Virtualization</a></li>
-      <li><a href="cloud.html">Cloud Infrastructure</a></li>
-      <li><a href="concepts.html">Key Concepts</a></li>
-      <li><a href="resources.html">References</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <text x="480" y="48" text-anchor="middle" class="title">How Server Infrastructure Evolved</text>
+  <text x="480" y="78" text-anchor="middle" class="body">From centralized mainframes to virtualization and cloud-based services</text>
 
-  <!-- Main content area for this page -->
-  <main class="page-layout">
-    <section>
-      <article class="content-card">
-        <h2>Student introduction</h2>
-        <p><strong>Name:</strong> MaryJane Mckinnon</p>
-        <p><strong>Course:</strong> IT 3203 - Intro to Web Development</p>
-        <p><strong>School:</strong> Kennesaw State University</p>
-        <p>
-          I am a student interested in technology and how web systems work behind the scenes. This project focuses on the
-          development of servers because they are essential to websites, applications, and cloud services used every day.
-        </p>
-      </article>
+  <rect x="40" y="110" width="260" height="360" class="card"/>
+  <rect x="350" y="110" width="260" height="360" class="card"/>
+  <rect x="660" y="110" width="260" height="360" class="card"/>
 
-      <article class="content-card">
-        <h2>Purpose of the project</h2>
-        <p>
-          The goal of this project is to explain how servers evolved from centralized computing systems into modern cloud
-          infrastructure. It also gives practice with HTML, CSS, content organization, and clean website design.
-        </p>
-      </article>
-    </section>
+  <text x="170" y="145" text-anchor="middle" class="subtitle">1. Centralized Mainframes</text>
+  <rect x="115" y="180" width="110" height="120" class="server"/>
+  <rect x="130" y="195" width="80" height="18" fill="#9bd1ea" rx="4"/>
+  <rect x="130" y="225" width="80" height="18" fill="#9bd1ea" rx="4"/>
+  <rect x="130" y="255" width="80" height="18" fill="#9bd1ea" rx="4"/>
+  <line x1="170" y1="300" x2="95" y2="340" stroke="#5a89a5" stroke-width="3"/>
+  <line x1="170" y1="300" x2="170" y2="350" stroke="#5a89a5" stroke-width="3"/>
+  <line x1="170" y1="300" x2="245" y2="340" stroke="#5a89a5" stroke-width="3"/>
+  <rect x="60" y="340" width="70" height="50" class="terminal"/>
+  <rect x="135" y="350" width="70" height="50" class="terminal"/>
+  <rect x="210" y="340" width="70" height="50" class="terminal"/>
+  <text x="170" y="420" text-anchor="middle" class="body">One powerful computer handled</text>
+  <text x="170" y="440" text-anchor="middle" class="body">processing, storage, and control</text>
 
-    <aside>
-      <section class="sidebar-card">
-        <h2>Project skills demonstrated</h2>
-        <ul>
-          <li>Multi-page website structure</li>
-          <li>Navigation design</li>
-          <li>Semantic HTML elements</li>
-          <li>Single-file CSS styling</li>
-          <li>Basic visual hierarchy and layout</li>
-        </ul>
-      </section>
-    </aside>
-  </main>
+  <text x="480" y="145" text-anchor="middle" class="subtitle">2. Virtualized Server Clusters</text>
+  <rect x="390" y="180" width="180" height="55" class="server2"/>
+  <rect x="390" y="245" width="180" height="55" class="server2"/>
+  <rect x="390" y="310" width="180" height="55" class="server2"/>
+  <rect x="408" y="194" width="60" height="24" fill="#e5f3fb" rx="4"/>
+  <rect x="480" y="194" width="60" height="24" fill="#e5f3fb" rx="4"/>
+  <rect x="408" y="259" width="60" height="24" fill="#e5f3fb" rx="4"/>
+  <rect x="480" y="259" width="60" height="24" fill="#e5f3fb" rx="4"/>
+  <rect x="408" y="324" width="60" height="24" fill="#e5f3fb" rx="4"/>
+  <rect x="480" y="324" width="60" height="24" fill="#e5f3fb" rx="4"/>
+  <text x="480" y="420" text-anchor="middle" class="body">Virtual machines shared physical</text>
+  <text x="480" y="440" text-anchor="middle" class="body">hardware more efficiently</text>
 
-    <!-- Footer note required by the assignment -->
-  <footer>
-    <div class="footer-note">
-      <p>This website is a class project for IT 3203. Visit the course site at <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203 Course Website</a>.</p>
-    </div>
-  </footer>
-</body>
-</html>
+  <text x="790" y="145" text-anchor="middle" class="subtitle">3. Cloud Platforms</text>
+  <g transform="translate(705,175)">
+    <path d="M40 120c-22 0-40-16-40-37 0-18 13-33 31-36 6-26 31-46 61-46 28 0 52 17 60 41 4-1 9-2 13-2 27 0 49 18 49 40 0 22-22 40-49 40H40z" class="cloud"/>
+    <text x="114" y="70" text-anchor="middle" class="label">Cloud</text>
+  </g>
+  <rect x="700" y="325" width="70" height="50" class="terminal"/>
+  <rect x="790" y="325" width="70" height="50" class="terminal"/>
+  <rect x="745" y="395" width="70" height="50" class="terminal"/>
+  <line x1="790" y1="305" x2="735" y2="325" stroke="#5a89a5" stroke-width="3"/>
+  <line x1="790" y1="305" x2="825" y2="325" stroke="#5a89a5" stroke-width="3"/>
+  <line x1="790" y1="305" x2="780" y2="395" stroke="#5a89a5" stroke-width="3"/>
+  <text x="790" y="470" text-anchor="middle" class="body">On-demand resources support apps,</text>
+  <text x="790" y="490" text-anchor="middle" class="body">APIs, storage, and global scale</text>
+
+  <path d="M305 290 C330 290, 330 290, 345 290" class="arrow"/>
+  <path d="M615 290 C640 290, 640 290, 655 290" class="arrow"/>
+  <text x="325" y="270" text-anchor="middle" class="small">better distribution</text>
+  <text x="635" y="270" text-anchor="middle" class="small">elastic scaling</text>
+</svg>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Self-assessment quiz about the evolution of servers from mainframes to cloud systems.">
+  <title>Server Evolution | Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 id="site-title">The Evolution of Servers</h1>
+    <p class="tagline">Self-assessment quiz for milestone 2</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="virtualization.html">Virtualization</a></li>
+      <li><a href="cloud.html">Cloud Infrastructure</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="resources.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="page-layout">
+    <section>
+      <article class="quiz-card">
+        <h2>Check your understanding</h2>
+        <p>
+          This quiz reviews the main ideas from the website. It includes a fill-in-the-blank question, three
+          multiple-choice questions, and one multi-selection question. After you submit, the page will immediately show
+          your total score, pass/fail result, and detailed feedback for each question.
+        </p>
+
+        <div class="quiz-meta">
+          <span>5 questions</span>
+          <span>Pass at 70% or higher</span>
+          <span>Retake anytime</span>
+        </div>
+
+        <!-- Form controls are grouped by question type and labeled for accessibility -->
+        <form id="server-quiz" class="quiz-form">
+          <section class="quiz-question">
+            <label for="q1"><strong>1. Fill in the blank:</strong> What type of infrastructure allows servers to scale dynamically over the internet?</label>
+            <input type="text" id="q1" name="q1" placeholder="Type your answer here">
+          </section>
+
+          <section class="quiz-question">
+            <fieldset>
+              <legend>2. Multiple choice: What was a major limitation of centralized mainframe systems?</legend>
+              <div class="option-list">
+                <label><input type="radio" name="q2" value="high flexibility"> High flexibility</label>
+                <label><input type="radio" name="q2" value="limited accessibility"> Limited accessibility</label>
+                <label><input type="radio" name="q2" value="unlimited scalability"> Unlimited scalability</label>
+                <label><input type="radio" name="q2" value="low cost"> Low cost</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="quiz-question">
+            <fieldset>
+              <legend>3. Multiple choice: What technology allows multiple virtual servers to run on one physical machine?</legend>
+              <div class="option-list">
+                <label><input type="radio" name="q3" value="apis"> APIs</label>
+                <label><input type="radio" name="q3" value="virtualization"> Virtualization</label>
+                <label><input type="radio" name="q3" value="dns"> DNS</label>
+                <label><input type="radio" name="q3" value="encryption"> Encryption</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="quiz-question">
+            <fieldset>
+              <legend>4. Multiple choice: What is a key advantage of cloud computing?</legend>
+              <div class="option-list">
+                <label><input type="radio" name="q4" value="fixed capacity"> Fixed capacity</label>
+                <label><input type="radio" name="q4" value="limited access"> Limited access</label>
+                <label><input type="radio" name="q4" value="scalability"> Scalability</label>
+                <label><input type="radio" name="q4" value="no internet required"> No internet required</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="quiz-question">
+            <fieldset>
+              <legend>5. Multi-selection: Which options are features of cloud-based systems?</legend>
+              <div class="option-list check-list">
+                <label><input type="checkbox" name="q5" value="Scalability"> Scalability</label>
+                <label><input type="checkbox" name="q5" value="Remote access"> Remote access</label>
+                <label><input type="checkbox" name="q5" value="On-demand resources"> On-demand resources</label>
+                <label><input type="checkbox" name="q5" value="Requires physical presence"> Requires physical presence</label>
+              </div>
+            </fieldset>
+          </section>
+
+          <div class="quiz-actions">
+            <button type="submit" class="primary-button">Submit Quiz</button>
+            <button type="button" id="reset-button" class="secondary-button">Reset / Retake Quiz</button>
+          </div>
+        </form>
+      </article>
+
+      <!-- Results are dynamically injected by JavaScript on the same page -->
+      <section id="quiz-results" class="result-panel" aria-live="polite">
+        <div id="result-banner" class="result-banner"></div>
+        <div id="score-output"></div>
+        <div id="result-list" class="results-list"></div>
+      </section>
+    </section>
+
+    <aside>
+      <section class="sidebar-card">
+        <h2>Study tips</h2>
+        <ul>
+          <li>Review the history page before answering questions about early server models.</li>
+          <li>Use the virtualization page for questions about resource sharing.</li>
+          <li>Use the cloud page for questions about scalability and on-demand services.</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-note">
+      <p>This website is a class project for IT 3203. Visit the course site at <a href="https://ksuweb.github.io/IT3203/">KSU IT 3203 Course Website</a>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
