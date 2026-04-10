@@ -122,12 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const totalQuestions = questionData.length;
+    // calculate overall score 
     const percentage = Math.round((correctCount / totalQuestions) * 100);
     const passed = percentage >= 70;
 
     // =========================
     // DISPLAY RESULTS
     // =========================
+    // display results on page
     resultsPanel.classList.add("visible");
 
     resultsBanner.className = `result-banner ${passed ? "status-pass" : "status-fail"}`;
